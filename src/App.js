@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PortfolioDisplay from './components/PortfolioDisplay';
 
-function App() {
+import './App.css'; // Include your CSS file for styles
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PortfolioDisplay/>
+      <Footer />
     </div>
   );
-}
+};
 
-export default App;
+const Footer = () => {
+  return (
+    <footer style={footerStyle}>
+      <p>&copy; {new Date().getFullYear()} Any queries ,ping me on above contact details</p>
+      <p>
+        <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer">
+          View CV
+        </a>
+      </p>
+    </footer>
+  );
+};
+
+const footerStyle = {
+  backgroundColor: '#282c34',
+  color: 'white',
+  textAlign: 'center',
+  padding: '1em 0',
+  position: 'relative',
+  bottom: 0,
+  width: '100%',
+};
+
+export default App; // Ensure this line is present
