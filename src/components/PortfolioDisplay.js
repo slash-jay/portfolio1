@@ -4,43 +4,64 @@ import LinkedIn from './linkedin.png'; // Import the LinkedIn logo
 import GitHub from './github.png'; // Import the GitHub logo  
 import Email from './email.jpeg'; // Import the Email logo
 import CVFile from './cv-file.pdf'; // Import the CV file from the components folder
-import profile from './profile.jpeg'; // Import the profile picture 
+import profile from './jay.jpg'; // Import the profile picture 
 
 
 const PortfolioDisplay = () => {
   // Hardcoded data
   const defaultData = {
-    name: 'John Doe',
+    name: 'Jaya Shankar',
     picture: profile,
-    shortDescription: 'A passionate developer with a knack for creating elegant solutions.',
-    email: 'john.doe@example.com',
-    linkedIn: 'https://www.linkedin.com/in/johndoe',
-    github: 'https://github.com/johndoe',
+    shortDescription: 'I am a passionate software developer actively seeking new opportunities to leverage my skills and contribute to impactful projects. With a strong background in computer science and hands-on experience in various programming languages and technologies, I thrive on solving complex problems and building innovative solutions. My commitment to continuous learning and professional growth drives me to stay updated with the latest industry trends and advancements.',
+    email: 'konajayashankar@gmail.com',
+    linkedIn: 'https://www.linkedin.com/in/jayashankar-kona-9038b0249/',
+    github: 'https://github.com/slash-jay',
     journey: [
-      { companyName: 'Tech Company A', years: '2021 - Present', description: 'Developing innovative software solutions.' },
-      { companyName: 'Tech Company B', years: '2019 - 2021', description: 'Contributed to various web development projects.' },
+      { companyName: 'CMR COLLEGE OF ENGINEERING AND TECHOLOGY ', years: '2021 - 2025', description: 'BRANCH -CSE-AIML' },
+      // { companyName: 'Tech Company B', years: '2019 - 2021', description: 'Contributed to various web development projects.' },
     ],
     skills: [
-      { category: 'Programming Languages', details: 'JavaScript, Python, Java' },
-      { category: 'Frameworks', details: 'React, Node.js, Spring Boot' },
+      { category: 'Programming Languages', details: 'c,c++, Java,python' },
+      { category: 'Frameworks', details: 'React, Node js, Spring Boot,express js' },
+      { categroy :'web technologies',details:'HTML,CSS,JavaScript'},
+      { category: 'Databases', details: 'MySQL, MongoDB' },
+      { category: 'Tools', details: 'Git, VS Code' },
+      
     ],
     projects: [
       {
-        title: 'Project One',
+        title: 'FIX ME',
         projectImage: null, // Replace with a default image if desired
-        description: 'A web application for task management.',
-        technologies: 'React, Node.js',
-        github: 'https://github.com/johndoe/project-one',
-        liveDemo: 'https://project-one.example.com',
+        description: ' Web portal for the business partners ,investors,job seekers for collaboration.',
+        technologies: 'Html,css,JavaScript, Node.js, Express, MongoDB',
+        github: 'https://github.com/slash-jay/fixme11',
+        liveDemo: ':https://fixme11.onrender.com/',
       },
       {
-        title: 'Project Two',
+        title: 'Mental Health',
         projectImage: null, // Replace with a default image if desired
-        description: 'An e-commerce platform built with React.',
-        technologies: 'React, Redux',
-        github: 'https://github.com/johndoe/project-two',
-        liveDemo: 'https://project-two.example.com',
+        description: 'Web portal for the mental health assessment for the teeenagers and adults.',
+        technologies: 'Python,firebase,ML classifiers',
+        github: 'https://github.com/slash-jay/mgit_hack',
+        
       },
+      {
+        title: 'quicky',
+        projectImage: null, // Replace with a default image if desired
+        description: 'a web application for securely saving notes and protected text online without requiring user accounts.',
+        technologies:'Html,css,JavaScript, Node.js, Express, MongoDB,CryptoJs',
+        github: 'https://github.com/slash-jay/quicky',
+        liveDemo: 'https://quicky-1.onrender.com/',
+
+      },
+      {
+        title: 'MakeItEasy',
+        projectImage: null, // Replace with a default image if desired
+        description: 'Developed a Chrome extension for students featuring a versatile notepad with textformatting, screenshot capture, and note management capabilities',
+        technologies: ': HTML,CSS,JAVASCRIPT,Chrome Extension APIs',
+        github: 'B-https://github.com/slash-jay/makeiteasy',
+      }
+      
     ],
     cv: CVFile, // Set the CV file path
   };
@@ -64,10 +85,11 @@ const PortfolioDisplay = () => {
         {/* Profile Picture */}
         {defaultData.picture && (
           <section id="profile-picture" className="portfolio-section">
-            <h2>Profile Picture</h2>
+          
             <img src={defaultData.picture} alt="Profile" className="profile-picture" />
             {defaultData.shortDescription && (
               <p className="short-description">{defaultData.shortDescription}</p>
+              
             )}
           </section>
         )}

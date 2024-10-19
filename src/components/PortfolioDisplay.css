@@ -192,7 +192,7 @@ body, html {
 
 /* Profile and Project Image Styling */
 .profile-picture {
-  max-width: 40%; /* Adjust this value as needed */
+  max-width: 20%; /* Adjust this value as needed */
   border-radius: 20px;
   margin: 0 auto; /* Center horizontally */
   display: block; /* Ensures the margin auto works */
