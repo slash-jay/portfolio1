@@ -10,13 +10,7 @@ body, html {
   animation: gradient 15s ease infinite;
 }
 
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Portfolio Display Styling */
+/* Responsive Portfolio Display */
 .portfolio-display {
   position: relative;
   padding: 60px;
@@ -28,7 +22,34 @@ body, html {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
   transition: all 0.5s ease;
 }
+.animated-text {
+  font-size: 36px;
+  color: #ffffff;
+  animation: textMove 10s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
 
+@keyframes textMove {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 1rem;
+  }
+}
 /* Profile Picture Description Styling */
 .short-description {
   font-style: italic;
@@ -38,41 +59,23 @@ body, html {
 
 /* Project Title Movement */
 .project-title-container {
-  overflow: hidden; /* Ensure the title stays within bounds */
+  overflow: hidden;
   position: relative;
 }
 
 .move-title {
   font-size: 40px;
   color: #fff;
-  animation: colorMove 10s infinite; /* Animating color and movement every 10 seconds infinitely */
-  display: inline-block; /* Ensures text moves within its container */
+  animation: colorMove 10s infinite;
+  display: inline-block;
 }
-
-@keyframes moveLeftToRight {
-  0% {
-    left: -100%; /* Start off-screen to the left */
-  }
-  50% {
-    left: calc(100% - 100px); /* Move to the right, leaving space on the right */
-  }
-  100% {
-    left: -100%; /* Loop back to the start position */
-  }
-}
-
-/* Other existing styles remain unchanged */
-
 
 /* Navbar Styling */
 .navbar {
   position: sticky;
   top: 0;
   background: linear-gradient(270deg, #1a2a6c, #b21f1f, #fcb045);
-  /* background-color: rgba(113, 30, 30, 0.9);
-   */
-   animation: gradient 15s ease infinite;
-
+  animation: gradient 15s ease infinite;
   padding: 15px;
   z-index: 1000;
   text-align: center;
@@ -85,63 +88,6 @@ body, html {
   justify-content: center;
   gap: 30px;
   padding: 0;
-}
-.animated-text {
-  font-size: 100px;
-  color: #fff;
-  animation: colorAndMove 10s infinite; /* Animating color and movement every 10 seconds infinitely */
-  display: inline-block; /* Ensures text moves within its container */
-}
-
-/* Keyframe to change colors and move from left to right, then back */
-@keyframes colorAndMove {
-  0% {
-    color: #5e1a1a; /* Red */
-    transform: translateX(150); /* Start position */
-  }
-  25% {
-    color: #0f2b5d; /* Pink */
-    transform: translateX(60%); /* Move 30% to the right */
-  }
-  50% {
-    color: #173904; /* Light Blue */
-    transform: translateX(150); /* Move back to the center */
-  }
-  75% {
-    color: #09654d; /* Green */
-    transform: translateX(-3%); /* Move 30% to the left */
-  }
-  100% {
-    color: #32012c; /* Light Purple */
-    transform: translateX(150); /* Return to original position */
-  }
-}
-@keyframes colorMove {
-  0% {
-    color: #000000; /* Red */
-    transform: translateX(150); /* Start position */
-  }
-  25% {
-    color: #330f5d; /* Pink */
-    transform: translateX(260%); /* Move 30% to the right */
-  }
-  50% {
-    color: #e7ff98; /* Light Blue */
-    transform: translateX(150); /* Move back to the center */
-  }
-  75% {
-    color: #330f5d; /* Green */
-    transform: translateX(-3%); /* Move 30% to the left */
-  }
-  100% {
-    color: #000000; /* Light Purple */
-    transform: translateX(150); /* Return to original position */
-  }
-}
-
-
-.navbar li {
-  margin: 0 10px;
 }
 
 .navbar a {
@@ -192,30 +138,21 @@ body, html {
 
 /* Profile and Project Image Styling */
 .profile-picture {
-  max-width: 20%; /* Adjust this value as needed */
+  max-width: 20%; 
   border-radius: 20px;
-  margin: 0 auto; /* Center horizontally */
-  display: block; /* Ensures the margin auto works */
+  margin: 0 auto;
+  display: block;
   transition: transform 0.5s ease;
-  animation: pulse 2s infinite; /* Add pulse effect */
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
-
-
-
-/* CV Link Styling */
+/* Responsive CV Link */
 .cv-link {
   display: inline-block;
   background: #ff5722;
@@ -231,7 +168,30 @@ body, html {
   transform: scale(1.15);
 }
 
-/* Responsive Design */
+/* Responsive Portfolio Footer */
+.portfolio-footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .portfolio-display {
+    padding: 40px;
+  }
+
+  .move-title {
+    font-size: 35px;
+  }
+
+  .cv-link {
+    padding: 12px 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
@@ -240,12 +200,10 @@ body, html {
 
   .portfolio-display {
     padding: 20px;
- 
   }
 
   .portfolio-section {
     padding: 20px;
-    margin: 20px 0;
   }
 
   .interactive-card {
@@ -266,10 +224,8 @@ body, html {
     font-size: 14px;
   }
 
-  .profile-picture, .project-image {
-    /* margin: 10px 0; */
-    width: fit-content;
-    height: auto;
+  .profile-picture {
+    max-width: 50%; 
   }
 
   .cv-link {
@@ -277,57 +233,40 @@ body, html {
     font-size: 14px;
   }
 
-  /* Responsive Portfolio Title */
-  h1 {
+  .move-title {
     font-size: 28px;
-    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-display {
+    padding: 10px;
   }
 
-  /* Section Header Styling for Smaller Screens */
-  h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-  
-  /* Adjusting Project and Skill Items for Mobile */
-  .skill-item, .project-item {
-    font-size: 14px;
-  }
-
-  /* Reducing the padding and margin for better mobile display */
-  .portfolio-display, .portfolio-section {
+  .portfolio-section {
     padding: 10px;
     margin: 10px 0;
   }
-}
-.project-image-container {
-  overflow: hidden; /* Ensure the image stays within bounds */
-  position: relative;
-  width: 100%; /* Set width as per your layout */
-}
 
-.move-image {
-  position: absolute;
-  animation: moveLeftToRight 5s linear infinite; /* Adjust the duration as needed */
-}
+  .interactive-card {
+    padding: 15px;
+  }
 
-@keyframes moveLeftToRight {
-  0% {
-    left: -100px; /* Start off-screen to the left */
+  .navbar a {
+    font-size: 12px;
+    padding: 6px 10px;
   }
-  50% {
-    left: calc(100% - 100px); /* Move to the right, leaving space on the right */
+
+  .cv-link {
+    padding: 8px 10px;
+    font-size: 12px;
   }
-  100% {
-    left: -100px; /* Loop back to the start position */
+
+  .move-title {
+    font-size: 22px;
   }
-}
-.portfolio-footer {
-  background-color: #282c34; /* Change as per your theme */
-  color: white; /* Change as per your theme */
-  text-align: center;
-  padding: 10px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+
+  .profile-picture {
+    max-width: 70%; 
+  }
 }
