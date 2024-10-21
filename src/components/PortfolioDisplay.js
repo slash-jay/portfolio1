@@ -13,7 +13,7 @@ const PortfolioDisplay = () => {
     name: 'Jaya Shankar',
     picture: profile,
     shortDescription: 'I am a passionate software developer actively seeking new opportunities to leverage my skills and contribute to impactful projects. With a strong background in computer science and hands-on experience in various programming languages and technologies, I thrive on solving complex problems and building innovative solutions. My commitment to continuous learning and professional growth drives me to stay updated with the latest industry trends and advancements.',
-    email: 'xxxxxxxxx',
+    email: 'konajayashankar@gmail.com',
     linkedIn: 'https://www.linkedin.com/in/jayashankar-kona-9038b0249/',
     github: 'https://github.com/slash-jay',
     journey: [
